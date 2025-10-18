@@ -11,6 +11,16 @@ This folder contains auxiliary scripts and examples for learning and demonstrati
   - Good starting point for beginners
   - Run with: `python examples/simple_demo.py` or `make demo`
 
+- **`face_detection_demo.py`** - Face detection demo
+  - Real-time face detection using OpenCV Haar Cascades
+  - Draws bounding boxes around detected faces
+  - Run with: `python examples/face_detection_demo.py`
+
+- **`combined_detection_demo.py`** - Combined object and face detection
+  - Runs both YOLO object detection and face detection simultaneously
+  - Shows the power of multiple AI models working together
+  - Run with: `python examples/combined_detection_demo.py`
+
 ### **📊 Comparison & Analysis**
 - **`compare_versions.py`** - Shows differences between main.py and simple_demo.py
   - Educational tool to understand the architecture
@@ -34,17 +44,27 @@ If you're new to this project, start here:
    python examples/simple_demo.py
    ```
 
-2. **Understand the differences:**
+2. **Try face detection:**
+   ```bash
+   python examples/face_detection_demo.py
+   ```
+
+3. **Try combined detection:**
+   ```bash
+   python examples/combined_detection_demo.py
+   ```
+
+4. **Understand the differences:**
    ```bash
    python examples/compare_versions.py
    ```
 
-3. **See the development tools:**
+5. **See the development tools:**
    ```bash
    python examples/demo_tools.py
    ```
 
-4. **Understand file usage:**
+6. **Understand file usage:**
    ```bash
    python examples/show_usage.py
    ```
