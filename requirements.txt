@@ -1,0 +1,18 @@
+# Core dependencies for webcam smart detection
+opencv-python>=4.8.0
+numpy>=1.24.0
+torch>=2.0.0
+torchvision>=0.15.0
+ultralytics>=8.0.0  # YOLO v8
+Pillow>=9.5.0
+matplotlib>=3.7.0
+
+# Optional dependencies for enhanced functionality
+flask>=2.3.0  # For web interface
+requests>=2.31.0
+python-dotenv>=1.0.0
+
+# Development dependencies
+pytest>=7.4.0
+black>=23.0.0
+flake8>=6.0.0

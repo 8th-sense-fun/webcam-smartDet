@@ -1,0 +1,77 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "webcam-smartdet"
+version = "0.1.0"
+description = "Python scripts to streamline videos from connected cameras and using ML model to detect and label objects in real time"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+keywords = ["computer-vision", "object-detection", "webcam", "yolo", "real-time"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Multimedia :: Video :: Capture",
+]
+dependencies = [
+    "opencv-python>=4.8.0",
+    "numpy>=1.24.0",
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+    "ultralytics>=8.0.0",
+    "Pillow>=9.5.0",
+    "matplotlib>=3.7.0",
+]
+
+[project.optional-dependencies]
+web = ["flask>=2.3.0", "requests>=2.31.0"]
+dev = ["pytest>=7.4.0", "black>=23.0.0", "flake8>=6.0.0"]
+all = ["webcam-smartdet[web,dev]"]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/webcam-smartdet"
+Repository = "https://github.com/yourusername/webcam-smartdet.git"
+Issues = "https://github.com/yourusername/webcam-smartdet/issues"
+
+[project.scripts]
+webcam-smartdet = "main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
