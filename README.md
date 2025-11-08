@@ -6,7 +6,9 @@ Python scripts to streamline videos from connected cameras and using ML model to
 
 - 🎥 **Real-time webcam capture** - Stream video from any connected camera
 - 🤖 **AI-powered object detection** - Using YOLO v8 for accurate and fast detection
+- 👤 **Face detection** - Real-time face detection using OpenCV Haar Cascades
 - 🏷️ **Real-time labeling** - Automatically label detected objects with confidence scores
+- 🔄 **Combined detection** - Run both object and face detection simultaneously
 - 💾 **Video recording** - Save detection results to video files
 - ⚙️ **Configurable settings** - Customize detection parameters and camera settings
 - 🖥️ **Command-line interface** - Easy to use CLI with various options
@@ -47,6 +49,16 @@ If you're new to this project, start with the simple demo:
 python examples/simple_demo.py
 # OR
 make demo
+```
+
+### Face Detection Demos
+Try the face detection features:
+```bash
+# Face detection only
+python examples/face_detection_demo.py
+
+# Combined object and face detection
+python examples/combined_detection_demo.py
 ```
 
 ## Usage
@@ -104,6 +116,7 @@ webcam-smartDet/
 │   ├── __init__.py
 │   ├── camera_handler.py         # Camera operations
 │   ├── object_detector.py        # YOLO-based detection
+│   ├── face_detector.py          # Face detection using OpenCV
 │   └── smart_detection_app.py    # Main application class
 ├── tests/                        # Unit tests
 │   └── test_camera_handler.py
@@ -111,6 +124,8 @@ webcam-smartDet/
 │   └── settings.py
 ├── examples/                     # Demo scripts and examples
 │   ├── simple_demo.py           # Basic demo
+│   ├── face_detection_demo.py   # Face detection demo
+│   ├── combined_detection_demo.py # Combined object + face detection
 │   ├── compare_versions.py      # Compare main vs demo
 │   └── README.md                # Examples documentation
 ├── models/                       # Model files (auto-created)
